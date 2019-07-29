@@ -1,0 +1,386 @@
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html body{
+		height: 100%;
+		width: 100%
+		margin: 81px 0 0 0; /*permite que saia de traz da barra de navegacao os conteudos da pagina*/
+		
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+	}
+
+	header{
+		background: #f5f5e6;
+		padding: 15px 0;
+	    height: 12%; /* tamanho do cabecalho*/	
+	}
+	#fundo{
+
+		background: url(../img/bk-corpo.jpg) repeat left /*#572a12*/;
+		background-attachment: fixed;/*permite o background fica fixo e os conteudos rolam*/
+
+	}
+	.container{
+	   	width: 100%;
+	    margin: 0 auto;
+	    }
+
+	.logo{
+	   	width: 130px;
+	   	margin-left: 80px; 
+	    float: left;
+	  	}
+
+	  	/*Efeito movimento na pagina historia*/
+	  	@keyframes animacao-moto {
+			from{background: url(img/bkfooter1.png) no-repeat;
+				margin-right: 95%;
+			
+
+			}
+			to{background: url(img/bkfooter1.png) no-repeat;
+				/*transform: rotate(-20deg); faz a moto empinar*/
+				margin-right: 8%;		
+			}
+		}
+		
+	.bike{
+		    width:60px;
+			background: url(img/bkfooter1.png) no-repeat;
+			animation-name: animacao-moto;
+			animation-duration: 10s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			position: relative;
+			float: right;
+			margin-right: 95%;
+	}
+
+		/*animacao da moto do rodape*/
+	  	@keyframes animacao-motos {
+			from{background: url(img/bkfooter2.png) no-repeat;
+			
+				transform: scaleX(0);
+			}
+			to{background: url(img/bkfooter1.png) no-repeat;
+				transform: scaleX(-1);	
+			}
+		}
+			
+		
+	.bike2{
+		  
+			background: url(img/bkfooter2.png) no-repeat;
+			animation-name: animacao-motos;
+			animation-duration: 3s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			position: relative;		
+	}
+
+			/*animacao do logo
+	  	@keyframes logo {
+			from{background: url(img/logo2.png) no-repeat;	
+				transform: scaleX(0);
+			}
+			to{background: url(img/logo1.png) no-repeat;
+				transform: scaleX(1);	
+			}
+		}
+				
+	.logo{
+		  
+			background: url(img/logo2.png) no-repeat;
+			animation-name: logo;
+			animation-duration: 5s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			position: relative;		
+	} */
+
+
+	}
+
+
+	 .foto1, .foto2, .foto3, .foto4{
+	 	opacity: 0.7;
+	 	width: 1000px;/* tamanho do carrosel*/
+	 	height: 300px;
+	 }
+
+     .carousel-control-next, .carousel-control-prev{/*espaço entre o icone passar de pagina e o inicio/fim do texto no carrossel*/
+	   width: 5%;
+	}
+	 #carousel-spotify{
+	   background: rgba(0,0,0,0.1); /*  0,4 é a opacidade*/
+	   	}
+
+	 section .carrossel{
+	 	margin: 76px 0 0 0; /*espaco entre o topo do site e o inicio da foto do carrosel*/
+	 }
+	
+
+	nav ul{
+		list-style: none;
+		float: right;
+		margin: 10px 50px 10px 50px;
+		padding-left: 400px;
+   }
+    nav ul li{
+		float: left;
+	}
+	nav ul li a{
+		color:#8B4513;
+	}
+	nav ul li a:link{
+		display: block;
+		margin-right: 35px;
+		padding-bottom: 3px;
+		text-transform: uppercase; 
+		text-decoration: none;
+}
+	nav ul li a:hover{
+		color: black;
+		padding: 1px;
+	
+		
+}
+
+/*flex-box*/
+.caixa{
+	margin: 2%;
+	margin-bottom: 10%;
+	height: 40%; /*altura do fundo*/
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	
+}
+.item{
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 3%;
+	width: 200px;
+	height: 200px;
+	background: white;
+	
+}
+
+.caixa img{ /*aqui identifica que so vai por sombra em img que esta na class caixa*/
+	box-shadow: 3px 3px black;
+	margin-top: 2px;
+
+}
+.caixa a{
+	text-decoration: none;
+	color: white;
+}
+
+.wallpaper{
+	margin: 5% 1% 5% 1%;
+	height: 40%; /*altura do fundo*/
+	display: flex;
+	flex-wrap: nowrap; /*permite q as fotos fiques na mesma distancia uma das outras*/
+	justify-content: space-between; /*as fotos ficam bem distribuidas na tela*/
+}
+
+.wall{
+	width: 300px;
+	height: 190px;
+	border-radius: 5px;
+	box-shadow: 3px 3px black;
+}
+
+.wall:hover{
+	width: 500px;
+	height: 300px;
+	transition: 0.6s;  	
+    transform-style: preserve-3d;    	
+}
+
+.botaoup{
+
+}
+
+/*Rodapé*/
+footer{
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	padding: 50px 0px 20px 0px;
+	position: relative;/*permite sobresair sobre qq outra imagem de fundo*/
+}
+footer h4{
+	color: #A0522D;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+footer .navbar-nav{
+	color: white;
+	font-size: 0.8em;
+}
+footer .navbar-nav a:hover{
+	color: #A0522D;
+	text-decoration: none;
+}
+footer ul{
+	list-style: none;
+}
+footer ul li{
+	float: right;
+	margin: 0 5px;
+}
+footer ul li a{
+	color: white;
+}
+
+
+/* deixar a tela responsiva*/
+@media (min-width: 1px) and (max-width:576px){
+
+	nav ul li{
+		background: #f5f5e6;
+		border-radius: 3px;
+		opacity: 0.8;
+	}
+     
+nav ul{
+		margin: 90px 5px 0 0;
+	}
+	nav ul li{
+		padding: 15px;
+	}
+	nav ul li a{
+		color: white;
+	}
+	nav ul li a:hover{
+		color: #A0522D;
+	}
+
+	.foto1, .foto2, .foto3, .foto4{
+
+		width: 600px;/* tamanho do carrosel*/
+		height: 350px; 	
+	}
+
+	.wall{
+		width: 210px;
+		height: 130px;
+	}
+
+	.wall:hover{
+		width: 220px;
+		height: 140px;
+	}
+
+ }
+
+/*sm */
+@media (max-width: 576px) {
+
+
+	nav ul li{
+		background: #f5f5e6;
+		border-radius: 3px;
+		opacity: 0.8;
+	}
+     
+	nav ul{
+		margin: 90px 0 0 0;
+	}
+	nav ul li{
+		padding: 15px;
+	}
+	nav ul li a{
+		color: #A0522D;
+	}
+	nav ul li a:hover{
+		color: #A0522D;
+	}
+	.foto1, .foto2, .foto3, .foto4{
+
+		width: 800px;/* tamanho do carrosel*/
+	 	height: 500px;
+	}
+	.wall{
+		width: 210px;
+		height: 130px;
+		padding-right: 2px;
+	}
+	.wall:hover{
+		width: 220px;
+		height: 140px;
+	}
+}
+
+/*md*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+	nav ul li{
+		background: #f5f5e6;
+		border-radius: 3px;
+		opacity: 0.8;
+	}
+     
+	nav ul{
+		margin: 90px 0 0 0;
+	}
+	nav ul li{
+		padding: 15px;
+	}
+	nav ul li a{
+		color: #A0522D;
+	}
+	nav ul li a:hover{
+		color: #A0522D;
+	}
+	.foto1, .foto2, .foto3, .foto4{
+
+		width: 800px;/* tamanho do carrosel*/
+	 	height: 500px;
+	}
+	.wall{
+		width: 290px;
+		height: 170px;
+		padding-right: 2px;
+	}
+	.wall:hover{
+		width: 280px;
+		height: 170px;
+	}
+
+}
+/*lg*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+	.wall{
+	    width: 220px;
+		height: 140px;
+	}
+	.wall:hover{
+		width: 230px;
+		height: 150px;
+		padding-right: 2px;
+	}
+
+
+	
+}
+/*xl*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+	
+}
+@media (min-width: 1200px){
+
+
+	
+}
+
